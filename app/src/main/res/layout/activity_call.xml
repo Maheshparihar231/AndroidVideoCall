@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CallActivity">
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webview"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ccc"
+        android:visibility="gone"
+        android:id="@+id/calllayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Someone is calling..."
+            android:padding="20dp"
+            android:textStyle="bold"
+            android:id="@+id/incommingcalltext"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_call_24"
+            android:id="@+id/acception"
+            android:layout_alignStart="@+id/rejection"
+            android:padding="20dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rejection"
+            android:padding="20dp"
+            android:src="@drawable/ic_baseline_call_end_24"
+            android:layout_alignParentEnd="true"
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/inputlayout">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/friendnameedit"
+            android:layout_toStartOf="@id/callbtn"
+            android:hint="Who do you want to call?"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="call"
+            android:id="@+id/callbtn"
+            android:layout_alignParentEnd="true"
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="64dp"
+        android:id="@+id/callcontrollayout">
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="#9900000"
+            android:padding="4dp"
+            android:src="@drawable/ic_baseline_videocam_24"
+            android:id="@+id/togglevidiobtn"/>
+        <ImageView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:padding="4dp"
+            android:background="#9900000"
+            android:layout_marginStart="36dp"
+            android:id="@+id/toggleaudiobtn"
+            android:src="@drawable/ic_baseline_mic_24"/>
+    </LinearLayout>
+</RelativeLayout>
